@@ -18,7 +18,7 @@ namespace VendasConsole.views
 
             if (Utils.validarCpf(c.Cpf))
             {
-                if (!ClienteDAO.buscarPorCpf(c.Cpf))
+                if (ClienteDAO.buscarPorCpf(c.Cpf) != null)
                 {
                     Console.WriteLine("\nCliente já possui cadastro no sistema!");
                 }

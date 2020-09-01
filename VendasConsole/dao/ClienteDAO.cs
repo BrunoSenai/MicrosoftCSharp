@@ -28,16 +28,16 @@ namespace VendasConsole.dao
             return clienteLista;
         }
 
-        public static bool buscarPorCpf(string cpf)
+        public static Cliente buscarPorCpf(string cpf)
         {
             foreach (Cliente cliente in clienteLista)
             {
                 if (cliente.Cpf.Equals(cpf))
                 {
-                    return false;
+                    return cliente;
                 }
             }
-            return true;
+            return null;
         }
     }
 }

@@ -21,7 +21,7 @@ namespace VendasConsole.views
 
             if (Utils.validarCpf(func.Cpf))
             {
-                if (!FuncionarioDAO.buscarPorCpf(func.Cpf))
+                if (FuncionarioDAO.buscarPorCpf(func.Cpf) != null)
                 {
                     Console.WriteLine("\nFuncionario já possui cadastro no sistema!");
                 }

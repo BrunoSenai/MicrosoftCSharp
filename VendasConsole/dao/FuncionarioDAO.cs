@@ -26,16 +26,16 @@ namespace VendasConsole.dao
             return funcionarioLista;
         }
 
-        public static bool buscarPorCpf(string cpf)
+        public static Funcionario buscarPorCpf(string cpf)
         {
             foreach (Funcionario funcionario in funcionarioLista)
             {
                 if (funcionario.Cpf.Equals(cpf))
                 {
-                    return false;
+                    return funcionario;
                 }
             }
-            return true;
+            return null;
         }
     }
 }

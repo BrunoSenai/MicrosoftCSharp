@@ -27,16 +27,16 @@ namespace VendasConsole.dao
             return produtos;
         }
 
-        public static bool buscarProduto(string nome)
+        public static Produto buscarProduto(string nome)
         {
             foreach (Produto produto in produtos)
             {
                 if (produto.Nome.Equals(nome))
                 {
-                    return false;
+                    return produto;
                 }
             }
-            return true;
+            return null;
         }
 
     }

@@ -10,6 +10,7 @@ namespace VendasConsole.views
     {
         static void Main(string[] args)
         {
+            Dados.IniciarDados();
             int opcao;
 
             do
@@ -22,6 +23,8 @@ namespace VendasConsole.views
                 Console.WriteLine("\n4 - Listar Funcionarios");
                 Console.WriteLine("\n5 - Cadastrar Produto");
                 Console.WriteLine("\n6 - Listar Produtos");
+                Console.WriteLine("\n7 - Cadastrar Venda");
+                Console.WriteLine("\n8 - Listar Vendas");
                 Console.WriteLine("\n\n0 - Sair");
 
                 Console.WriteLine("\n\nInforme a opção desejada: ");
@@ -57,6 +60,14 @@ namespace VendasConsole.views
                     case 6:
                         Console.WriteLine("LISTAGEM DE PRODUTOS ------ \n");
                         ProdutoView.listarProdutos();
+                        break;
+                    case 7:
+                        Console.WriteLine("CADASTRAR VENDA ------ \n");
+                        VendaView.cadastrarVenda();
+                        break;
+                    case 8:
+                        Console.WriteLine("LISTAGEM DE VENDAS ------ \n");
+                        VendaView.listarVendas();
                         break;
                     default:
                         Console.WriteLine("\nOpção Invalida. Tente novamente!\n");
