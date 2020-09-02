@@ -29,7 +29,7 @@ namespace VendasConsole.dao
             Funcionario funcionario = new Funcionario()
             {
                 Nome = "Amandaa Batizada",
-                Cpf = "43772255027"
+                Cpf = "11259285901"
             };
 
             FuncionarioDAO.cadastrar(funcionario);

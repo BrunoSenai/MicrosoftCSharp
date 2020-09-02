@@ -27,5 +27,21 @@ namespace VendasConsole.dao
             return vendas;
         }
 
+        public static List<Venda> listarPorCpf(string cpf)
+        {
+            List<Venda> aux = new List<Venda>();
+
+            foreach (Venda vendaCadastrada in vendas)
+            {
+                if (vendaCadastrada.Cliente.Cpf.Equals(cpf))
+                {
+                    aux.Add(vendaCadastrada);
+                }
+            }
+
+            return aux;
+
+        }
+
     }
 }

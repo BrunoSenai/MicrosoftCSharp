@@ -67,7 +67,14 @@ namespace VendasConsole.views
                         break;
                     case 8:
                         Console.WriteLine("LISTAGEM DE VENDAS ------ \n");
-                        VendaView.listarVendas();
+                        VendaView.listarVendas(VendaDAO.listar());
+                        break;
+                    case 9:
+                        Console.Clear();
+                        Console.WriteLine("Informe o cpf: ");
+                        string cpf = Console.ReadLine();
+                        Console.WriteLine("LISTAGEM DE VENDAS POR CPF ------ \n");
+                        VendaView.listarVendas(VendaDAO.listarPorCpf(cpf));
                         break;
                     default:
                         Console.WriteLine("\nOpção Invalida. Tente novamente!\n");

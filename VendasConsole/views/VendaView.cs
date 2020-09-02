@@ -55,7 +55,9 @@ namespace VendasConsole.views
                             Console.WriteLine("\nInforme a quantidade do produto: ");
                             LV.Quantidade = Convert.ToInt32(Console.ReadLine());
 
-                            venda.PrecoFinal = venda.PrecoFinal + (LV.Produto.Preco * LV.Quantidade);
+                            LV.Preco = produto.Preco;
+
+                            venda.PrecoFinal = venda.PrecoFinal + (LV.Preco * LV.Quantidade);
                             venda.Carrinho.Add(LV);
 
                             Console.WriteLine("\nDeseja continuar comprando? Digite S ou N");
@@ -88,9 +90,9 @@ namespace VendasConsole.views
             }
         }
 
-        public static void listarVendas()
+        public static void listarVendas(List<Venda> vendas)
         {
-            foreach (Venda venda in VendaDAO.listar())
+            foreach (Venda venda in vendas)
             {
                 Console.WriteLine("\n---------------------------------------\n");
                 Console.WriteLine(venda.ToString());

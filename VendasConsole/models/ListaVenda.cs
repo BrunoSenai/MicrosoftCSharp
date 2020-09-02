@@ -18,7 +18,7 @@ namespace VendasConsole.models
 
         public override string ToString()
         {
-            return $"Produto: {Produto.Nome} - Preço: R$ {Produto.Preco} - Quantidade: {Quantidade}\n";
+            return $"Produto: {Produto.Nome} - Preço: R$ {Preco} - Quantidade: {Quantidade}\n";
         }
 
     }
